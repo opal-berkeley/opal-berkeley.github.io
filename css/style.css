@@ -1,0 +1,211 @@
+/* Fonts sourcing */
+@font-face {
+  font-family: Rodina-Regular;
+  src: url('fonts/Rodina-Regular.otf');
+}
+
+/* Bootstrap overwrites */
+
+body {
+  background: url("../images/News.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100vw;
+  font-family: Rodina-Regular;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*adjusting img header*/
+#header img {
+  max-width: 10em;
+  max-height: 10em;
+}
+
+/*making the navbar sexy*/
+@media (min-width: 768px){
+    .navbar-nav {
+        margin: 0 auto;
+        display: table;
+        table-layout: auto;
+        float: none;
+        width: 100%;
+    }
+    .navbar-nav>li {
+        display: table-cell;
+        float: none;
+        text-align: center;
+    }
+} 
+
+/*.navbar-default .navbar-nav > .active{
+    color: white;
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > .active > a, {
+    color: #00000;
+    background-color: #00000;
+}
+*/
+
+/* Top banner */
+
+/* Making the top banner partially filled with color */
+#top-banner {
+  background: linear-gradient(180deg, rgba(0,50,98,1) 60%, transparent 40%);
+  overflow: hidden;
+  padding-top: 1.75em;
+  padding-bottom: 1.75em;
+  z-index: 10;
+  width: 100%;
+  border-width: 12em 10em 0;
+  right: 0px;
+  left: 0px;
+}
+
+#banner-wrapper {
+  margin: 0px auto;
+  position: relative;
+  width: 100%;
+  max-width: 55em;
+  padding: 0px 1.25em;
+}
+
+#logo {
+  float: left;
+  width: 100%;
+  max-width: 8em;
+}
+
+#logo:hover {
+  opacity: 0.9;
+  transition: opacity 300ms ease 0s;
+}
+
+.navbar {
+  float: right;
+}
+
+/*Navbar buttons padding*/
+.navbar-nav>li {
+  padding-left: 1.9em;
+  padding-right: 1.9em;
+  font-family: Rodina-Regular;
+}
+
+.navbar-nav>li>a {
+  width: 90px;
+  font-size: 150%
+}
+
+#navbar-options a:hover {
+  font-color: white;
+  background-color: rgba(0,35,70,1);
+}
+
+/*centering the navbar size*/
+.navbar-fixed-top {
+}
+
+/* Body text */
+#wrapper {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 55em;
+  padding: 2em 5em 2em 5em;
+  background: rgba(236, 236, 236, 0.9);
+}
+
+/* Slideshow */
+.main-slideshow
+{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  max-height: 80%;
+}
+
+.next:hover, .prev:hover
+{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.col
+{
+  position: absolute;
+  margin-top: 78px;
+  height: 100%;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.right-col
+{
+  right: 0;
+}
+
+.left-col
+{
+  left: 0;
+}
+
+/* Body sections */
+.page
+{
+  height:100vh;
+}
+
+#events
+{
+  background-image: url("images/News.png");
+}
+
+/* About */
+/*#profiles {
+  height: 100%;
+}*/
+
+#profiles figure {
+    /*max-height: 300px;*/
+    max-width: 300px;
+    display: block;
+    overflow: hidden;
+    /*z-index: 100;*/
+    position: relative;
+    margin: 5px 5px 20px 5px;
+}
+
+#profiles figcaption {
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0; 
+    padding: 20px;
+}
+
+#profiles figure:hover img {
+    opacity: 0.5;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/*#profiles a {
+    color: #fff;
+}*/
+
+#profiles figure:hover figcaption {
+    opacity: 1.0;
+    bottom: -60%;
+    left: 0;
+    color: #000000;
+}
+
+/* end About */
