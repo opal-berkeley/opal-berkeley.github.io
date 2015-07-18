@@ -1,76 +1,23 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>OPAL</title>
-    <link rel="shortcut icon" href="images/icon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/respond.js"></script>
-</head>
+---
+layout: default
+---
 
-<body>
+<div class="home">
 
-    <div class="container-fluid">
+  <h1 class="page-heading">Posts</h1>
 
-        <header id="top-banner" role="banner">
-            <div id="banner-wrapper">
-                <a id="logo" href="#">
-                    <img class="center-block img-responsive" src="images/OPAL-logo.png" alt="OPAL logo. Click for home." id="logo-img">
-                </a>
-                <!-- navigation -->
-                <nav class="navbar" id="navbar-options" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-topbanner" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-                    <!-- Normal navbar -->
-                    <div class="collapse navbar-collapse" id="collapse-topbanner">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html"> Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="#">Events</a></li>  
-                            <li><a href="#">Calendar</a></li>
-                        </ul> 
-                    </div> <!-- collapse -->
-                </nav> 
-            </div> <!-- banner-wrapper -->
-        </header>   
-        <div id="wrapper">
-            <div id="body-text">
-                <section>
-                <h3 id="title">
-                    Most Recent
-                </h3>
-                <h6 id="date-text">
-                    Updated 07/12/2015
-                </h6>
-                <p id="lipsum">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id mi a nisi auctor egestas nec ut ante. Curabitur non risus sit amet quam tempor pellentesque at at ipsum. Mauris sagittis consectetur neque sit amet tincidunt. Nulla quis dapibus lacus. In egestas efficitur arcu nec pulvinar. Fusce sed orci mauris. Sed condimentum tristique nunc eget venenatis. Maecenas felis sapien, vulputate a velit sed, sagittis interdum sapien. Aenean ut tellus non nibh maximus pretium. Morbi tincidunt felis at leo scelerisque, sit amet tristique tellus luctus.
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-                  Suspendisse potenti. Fusce lobortis metus et elit iaculis efficitur. Nulla accumsan convallis libero ut iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed mauris dui, venenatis eu venenatis congue, congue ornare ligula. Nam et luctus purus. Aliquam vehicula tellus nulla, in mattis quam laoreet nec. Proin pharetra erat ac lorem varius pulvinar.
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-                  Phasellus lobortis rutrum eros vitae molestie. In rhoncus ullamcorper ligula vitae varius. In sed mauris elit. Nam non sapien tincidunt, pharetra sapien commodo, blandit turpis. Praesent risus ex, porttitor at diam id, accumsan pulvinar magna. Curabitur aliquam bibendum felis, id laoreet dui malesuada in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam cursus tempor dapibus. Etiam dignissim nec leo non fermentum. Etiam cursus sit amet neque eu sagittis.
-
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin neque vel tortor commodo porta. Aenean sollicitudin mattis venenatis. Donec rutrum elit tincidunt tortor feugiat lacinia. Curabitur pharetra ligula dui, vitae ultricies sem dapibus quis. Pellentesque blandit orci vitae risus cursus finibus. Nunc sed aliquam lacus, ac dictum ipsum. Curabitur nisi quam, rhoncus ut enim in, dapibus consequat orci. Suspendisse non urna erat.
-
-                  Integer eget lectus ligula. Nam sit amet enim lectus. Mauris lectus risus, luctus id magna id, commodo maximus turpis. Fusce sagittis euismod lectus, sed pretium diam porttitor vitae. Integer risus orci, elementum a dictum eu, mattis sit amet orci. Etiam sed nulla sed mauris pulvinar tincidunt quis a mi. Nullam euismod, dui non sodales euismod, nunc nisl faucibus tellus, eu pretium dolor nunc in dui. Pellentesque in diam et enim vehicula imperdiet. Aliquam faucibus tellus ex, sed laoreet sem gravida a. Cras non metus metus. Nam quis volutpat ex. Phasellus nec libero quis ex posuere laoreet vel sit amet velit. In vitae consectetur arcu. Suspendisse sapien neque, dignissim ac tempor vel, eleifend in odio. 
-                <p> <!-- lipsum -->
-                </section>
-            </div> <!-- body-text -->
-        </div> <!-- wrapper -->
-    </div> <!-- container -->
-    <!-- javascript -->
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-</html>
+</div>
