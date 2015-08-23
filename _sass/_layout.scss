@@ -95,18 +95,6 @@
  * Site header
  */
 
-#top-banner {
-  background: linear-gradient(180deg, rgba(0,50,98,1) 60%, transparent 40%);
-  overflow: hidden;
-  padding-top: 1.75em;
-  padding-bottom: 1.75em;
-  z-index: 10;
-  width: 100%;
-  border-width: 12em 10em 0;
-  right: 0px;
-  left: 0px;
-}
-
 #banner-wrapper {
   margin: 0px auto;
   position: relative;
@@ -134,7 +122,6 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 }
 

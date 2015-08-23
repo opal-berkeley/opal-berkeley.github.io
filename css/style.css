@@ -1,33 +1,33 @@
 /* Fonts sourcing */
-@font-face {
-  font-family: Rodina-Regular;
-  src: url('fonts/Rodina-Regular.otf');
-}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 /* Bootstrap overwrites */
 
 body {
-  background: url("../images/News.png");
+  /*background: url("../images/News.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: 100vw;
-  font-family: Rodina-Regular;
+  background-size: 100vw;*/
+  background: url("../images/fabric_of_squares_gray/fabric_of_squares_gray.png");
+  background-repeat: repeat;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+body footer{
+  background: url("../images/fabric_of_squares_gray/fabric_of_squares_gray_darker.png");
+  background-repeat: repeat;
+  border-top: 2px solid rgba(100,100,100,1);
 }
 
 /*adjusting img header*/
 #header img {
   max-width: 10em;
-  max-height: 10em;
 }
 
 /*making the navbar sexy*/
-@media (min-width: 768px){
+/*@media (min-width: 768px){
     .navbar-nav {
         margin: 0 auto;
         display: table;
@@ -40,80 +40,84 @@ body {
         float: none;
         text-align: center;
     }
-} 
+} */
+@media (max-device-width: 736px){
+    .navbar-brand {
+        background-color: white;
+    }
 
-/*.navbar-default .navbar-nav > .active{
-    color: white;
-    background-color: white;
 }
-
-.navbar-default .navbar-nav > .active > a, {
-    color: #00000;
-    background-color: #00000;
-}
-*/
 
 /* Top banner */
 
 /* Making the top banner partially filled with color */
-#top-banner {
-  background: linear-gradient(180deg, rgba(0,50,98,1) 60%, transparent 40%);
-  overflow: hidden;
-  padding-top: 1.75em;
+.site-header {
+  background: linear-gradient(180deg, rgba(0,50,98,1) 70%, transparent 30%);
+  padding-top: 0.5em;
   padding-bottom: 1.75em;
   z-index: 10;
-  width: 100%;
-  border-width: 12em 10em 0;
-  right: 0px;
-  left: 0px;
 }
 
-#banner-wrapper {
+.site-header .wrapper {
   margin: 0px auto;
-  position: relative;
-  width: 100%;
-  max-width: 55em;
   padding: 0px 1.25em;
 }
 
-#logo {
-  float: left;
-  width: 100%;
-  max-width: 8em;
+.navbar {
+  background-color: transparent;
+  border-color: transparent;
 }
 
-#logo:hover {
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: rgba(17,80,140,1);
+}
+
+.navbar-collapse {
+  position: relative;
+  float: right;
+}
+
+.navbar-header {
+  position: relative;
+  float: left;
+}
+
+.navbar-brand {
+  float: left;
+  width: 100%;
+  max-width: 12em;
+  margin: auto;
+  padding: 1em;
+}
+
+.navbar-brand:hover {
   opacity: 0.9;
   transition: opacity 300ms ease 0s;
 }
 
-.navbar {
-  float: right;
+/*Navbar buttons padding*/
+.navbar-nav {
+  padding-top: 1.5em;
 }
 
-/*Navbar buttons padding*/
 .navbar-nav>li {
   padding-left: 1.9em;
   padding-right: 1.9em;
-  font-family: Rodina-Regular;
 }
 
-.navbar-nav>li>a {
-  width: 90px;
+.navbar-opt {
+  width: 80px;
   font-size: 150%
 }
 
-#navbar-options a:hover {
-  font-color: white;
-  background-color: rgba(0,35,70,1);
-}
-
-/*centering the navbar size*/
-.navbar-fixed-top {
+.navbar-opt:hover {
+  opacity: 0.5;
+  /*background-color: rgba(0,35,70,0);*/
 }
 
 /* Body text */
-#wrapper {
+.page-content .wrapper {
   margin: 0px auto;
   width: 100%;
   max-width: 55em;

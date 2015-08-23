@@ -1,31 +1,30 @@
 <header class="site-header">
 
   <div class="wrapper">
+        <nav class="navbar navbar-default" id="navbar" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-topbanner">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ site.baseurl }}">
+                  <img class="center-block img-responsive" src= "{{ "/images/OPAL-logo.png" | prepend: site.baseurl }}" alt="OPAL logo.Click for home." id="logo-img">
+              </a>
+            </div> <!-- navbar-header -->
 
-    <a class="site-logo" href="{{ site.baseurl }}">
-        <img class="center-block img-responsive" src= "{{ "/images/OPAL-logo.png" | prepend: site.baseurl }}" alt="OPAL logo.Click for home." id="logo-img">
-    </a>
-
-        <nav class="navbar" id="navbar-options" role="navigation">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-topbanner" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-
-              <!-- Normal navbar -->
-              <div class="collapse navbar-collapse" id="collapse-topbanner">
-                  <ul class="nav navbar-nav">
-                      <li class="active"><a href="index.html"> Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="#">Events</a></li>
-                      <li><a href="#">Calendar</a></li>
-                  </ul>
-              </div> <!-- collapse -->
+            <div class="collapse navbar-collapse" id="collapse-topbanner">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="navbar-opt" href="index.html"> Home</a></li>
+                    <li><a class="navbar-opt" href="about.html">About</a></li>
+                    <li><a class="navbar-opt" href="#">Events</a></li>
+                    <li><a class="navbar-opt" href="#">Calendar</a></li>
+                </ul>
+            </div> <!-- collapse -->
+          </div> <!-- container-fluid -->
           </nav>
 
   </div>
