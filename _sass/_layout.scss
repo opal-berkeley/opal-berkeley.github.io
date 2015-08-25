@@ -1,128 +1,83 @@
 /**
- * Site header
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
-
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
+ * Site
  */
+body {
+  background: url("../images/fabric_of_squares_gray/fabric_of_squares_gray.png");
+  background-repeat: repeat;
+  font-family: 'Montserrat', sans-serif;
+}
 
 /**
  * Site header
  */
+.site-header {
+  background: linear-gradient(180deg, rgba(0,50,98,1) 70%, transparent 30%);
+  padding-top: 0.5em;
+  padding-bottom: 1.75em;
+  z-index: 10;
+}
 
-#banner-wrapper {
+.site-header .wrapper {
   margin: 0px auto;
-  position: relative;
-  width: 100%;
-  max-width: 55em;
   padding: 0px 1.25em;
 }
 
-.site-logo {
-  float: left;
-  width: 100%;
-  max-width: 8em;
-}
-
-#logo:hover {
-  opacity: 0.9;
-  transition: opacity 300ms ease 0s;
-}
-
+/* Overwriting navbar-default colors */
 .navbar {
+  margin-bottom: 80px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Styling navbar list */
+.navbar-collapse {
+  position: relative;
   float: right;
+  padding-bottom: 1.5em;
+}
+
+.navbar-opt {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  font-size: 150%;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: rgba(128,130,133,1);
+}
+
+.navbar-opt:hover {
+  color: rgba(128,130,133,1);
+}
+
+.navbar-header {
+  position: relative;
+  float: left;
+}
+
+.site-logo img {
+  max-width: 10em;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
 }
 
 /**
  * Site footer
  */
+
 .site-footer {
+    background: url("../images/fabric_of_squares_gray/fabric_of_squares_gray_darker.png");
+    background-repeat: repeat;
+    border-top: 2px solid rgba(100,100,100,1);
     padding: $spacing-unit 0;
+    font-size: 0.75em;
 }
 
 .footer-heading {
@@ -137,7 +92,6 @@
 }
 
 .footer-col-wrapper {
-    font-size: 15px;
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
@@ -155,13 +109,13 @@
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+    width:         calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -185,6 +139,14 @@
     }
 }
 
+.footer-col ul {
+    margin: auto;
+}
+
+.glyphicon-envelope {
+    width: 2em;
+    height: 1.5em;
+}
 
 
 /**
@@ -262,4 +224,17 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+ * About
+ */
+.profile-col {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.profile-cell {
+    margin:auto;
 }
