@@ -1,4 +1,4 @@
-/**
+/*
  * Site
  */
 body {
@@ -11,7 +11,7 @@ body {
  * Site header
  */
 .site-header {
-  background: linear-gradient(180deg, rgba(0,50,98,1) 70%, transparent 30%);
+  background: linear-gradient(180deg, rgba(0,50,98,1) 60%, transparent 40%);
   padding-top: 0.5em;
   padding-bottom: 1.75em;
   z-index: 10;
@@ -24,7 +24,6 @@ body {
 
 /* Overwriting navbar-default colors */
 .navbar {
-  margin-bottom: 80px;
   background-color: transparent;
   border-color: transparent;
 }
@@ -33,16 +32,17 @@ body {
 .navbar-collapse {
   position: relative;
   float: right;
-  padding-bottom: 1.5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 .navbar-opt {
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-  font-size: 150%;
+  font-size: 135%;
 }
 
 .navbar-default .navbar-nav>li>a {
+  padding-left: $spacing_unit/2;
+  padding-right: $spacing_unit/2;
   color: white;
 }
 
