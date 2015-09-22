@@ -4,9 +4,9 @@ email: opalberkeley.webmaster@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   OPAL @ Berkeley is an organization that celebrates cultural diversity
   and brings together people with the same motivations.
-baseurl: "" # the subpath of your site, e.g. /blog
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  opal-berkeley
+#github_username:  opal-berkeley
 facebook_username: berkeleyopal
 
 # Build settings
