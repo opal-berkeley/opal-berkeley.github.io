@@ -20,6 +20,7 @@ window.fbAsyncInit = function() {
 
 function facebookInit() {
     FB.getAuthResponse(function(response) {
+        console.log(response);
         if (response.authResponse) {
             $('#AccessToken').val(response.authResponse.accessToken);
             console.log('yes access token');
