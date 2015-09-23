@@ -19,6 +19,14 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 
 function facebookInit() {
+    FB.getAuthResponse(function(response) {
+        if (response.authResponse) {
+            $('#AccessToken').val(response.authResponse.accessToken);
+        } else {
+            console.log('no access token');
+            // do something...maybe show a login prompt
+        }
+    });
     FB.getLoginStatus(function(response) {
         if (response.authResponse) {
             $('#AccessToken').val(response.authResponse.accessToken);
